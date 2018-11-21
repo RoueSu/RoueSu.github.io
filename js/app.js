@@ -158,7 +158,8 @@ var Canvas = {
             y: this.ch,
             character: this.letters[Math.floor(Math.random() * l)],//随机获取字母
             xSpeed: (Math.random() * 20) - 10,
-            ySPeed: (Math.random() * 20) - 10
+            ySPeed: (Math.random() * 20) - 10,
+            color:this.color[Math.round(Math.random()*this.color.length)]
         };
         this.list.push(par);
         this.draw();
@@ -169,7 +170,7 @@ var Canvas = {
         for (var i = 0; i < l; i++) {
             var lists = this.list[i];
             c.font = '12px sans-serif';
-            c.fillStyle = this.color[Math.round(Math.random()*this.color.length)];
+            c.fillStyle = lists.color;
             c.fillText(lists.character, lists.x, lists.y);
             lists.x += lists.xSpeed;
             lists.y += lists.ySPeed;
