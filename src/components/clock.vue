@@ -55,7 +55,7 @@
       },
       time() {
         let now = new Date();
-        let hour = now.getHours() - 12;
+        let hour = now.getHours()>12?now.getHours()-12:now.getHours() ;
         let minute = now.getMinutes();
         let seconds = now.getSeconds();
         let nowValue = [hour, minute, seconds];
