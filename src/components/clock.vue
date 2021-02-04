@@ -65,7 +65,9 @@
         }
         for (let i = 0; i < nowValue.length; i++) {
           let num = nowValue[i];
-          this.textSet[i][1][num].style.color = '#fff';
+          if(this.textSet[i][1][num]!==undefined){
+            this.textSet[i][1][num].style.color = '#fff';
+          }
         }
         let widthMid = document.body.clientWidth / 2;
         let heightMid = document.body.clientHeight / 2;
